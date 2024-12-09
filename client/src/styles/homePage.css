@@ -1,0 +1,136 @@
+/* homePage.css */
+
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.home-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Welcome Container */
+.welcome-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.welcome-container h1 {
+  font-size: 2.5rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.welcome-container p {
+  font-size: 1.2rem;
+  color: #555555;
+}
+
+.platform-charges-info {
+  font-size: 1rem;
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #4caf50;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Events Container */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Event Card */
+.event-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-card h3 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  font-size: 1rem;
+  color: #666666;
+  margin: 5px 0;
+}
+
+.event-owner {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Input and Button */
+.event-card input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.event-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.event-card button:hover {
+  background-color: #0056b3;
+}
+
+.event-card button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-container h1 {
+    font-size: 2rem;
+  }
+
+  .event-card h3 {
+    font-size: 1.2rem;
+  }
+}
