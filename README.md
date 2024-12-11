@@ -1,1 +1,1 @@
-# BettingPlatForm
+The Community Betting Platform is an interactive web application where users can create events and place bets on others’ events. It fosters a vibrant community-driven experience, allowing users to engage in betting with secure and transparent processes. The platform features a user-friendly dashboard for managing events and bets while ensuring secure transactions and seamless functionality.
