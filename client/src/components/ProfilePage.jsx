@@ -15,7 +15,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/user?userId=${userId}`, {
+        const response = await fetch(`https://betting-platform-rpmp.onrender.com/api/user?userId=${userId}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -35,7 +35,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchBetHistory = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/bets/history?userId=${userId}`, {
+        const response = await fetch(`https://betting-platform-rpmp.onrender.com/api/bets/history?userId=${userId}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -59,7 +59,7 @@ const ProfilePage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/user/addbalance", {
+      const response = await fetch("https://betting-platform-rpmp.onrender.com/api/user/addbalance", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: parseFloat(amount), userId }),
@@ -108,6 +108,7 @@ const ProfilePage = () => {
       {/* Bet History Section */}
       <div className="bet-history">
         <h2>Bet History</h2>
+        <h3>10% of your winnings will be platform charges.</h3>
         {betHistory.length === 0 ? (
           <p>No bet history found.</p>
         ) : (
@@ -127,7 +128,7 @@ const ProfilePage = () => {
                 <tr key={index}>
                   <td>{bet.eventId.title}</td>
                   <td>{bet.eventId.description}</td>
-                  <td>{bet.eventId.returnration}</td>
+                  <td>{bet.eventId.returnratio}x</td>
                   <td>Rs{bet.betamount}</td>
                   <td>{bet.betstatus}</td>
                   <td>Rs{bet.returnamount}</td>
